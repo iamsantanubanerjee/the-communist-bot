@@ -1,5 +1,5 @@
-import os
 import json
+import os
 import uuid
 
 from sentence_transformers import SentenceTransformer

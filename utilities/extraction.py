@@ -30,7 +30,7 @@ def extraction(
     file_name = os.path.splitext(os.path.basename(input_file_path))[0]
 
     loader = PyPDFLoader(input_file_path)
-    pages = loader.load_and_split()  # Extracting pagewise Data
+    pages = loader.load_and_split()  # Extracting pagewise data
 
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=chunk_size,
