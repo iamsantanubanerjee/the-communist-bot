@@ -6,13 +6,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Initialise Atlas Connection String and Password
-atlas_connection_string = os.getenv("ATLAS_CONNECTION_STRING")
-atlas_cluster_password = os.getenv("ATLAS_CLUSTER_PASSWORD")
-database_name = os.getenv("ATLAS_DATABASE_NAME")
-collection_name = os.getenv("ATLAS_COLLECTION_NAME")
+ATLAS_CONNECTION_STRING = os.getenv("ATLAS_CONNECTION_STRING")
+ATLAS_CLUSTER_PASSWORD = os.getenv("ATLAS_CLUSTER_PASSWORD")
+ATLAS_DATABASE_NAME = os.getenv("ATLAS_DATABASE_NAME")
+ATLAS_COLLECTION_NAME = os.getenv("ATLAS_COLLECTION_NAME")
 
-updated_connection_string = atlas_connection_string.replace(
-    "<password>", atlas_cluster_password
+UPDATED_CONNECTION_STRING = ATLAS_CONNECTION_STRING.replace(
+    "<password>", ATLAS_CLUSTER_PASSWORD
 )
 
 
@@ -30,7 +30,7 @@ def atlas_ingestion(folder_path: str) -> None:
                 json_files.append(relative_path)
 
     for file in json_files:
-        command = f"mongoimport {updated_connection_string}{database_name} --collection {collection_name} {folder_path}\\{file} --jsonArray"
+        command = f"mongoimport {UPDATED_CONNECTION_STRING}{ATLAS_DATABASE_NAME} --collection {ATLAS_COLLECTION_NAME} {folder_path}\\{file} --jsonArray"
 
         # Execute the command for Windows
         try:
