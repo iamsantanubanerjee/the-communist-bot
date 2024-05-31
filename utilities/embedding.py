@@ -20,7 +20,7 @@ def generate_embeddings(text: str) -> list[float]:
     return embeddings.tolist()
 
 
-def transform_data(input_folder_path: str, output_folder_path) -> None:
+def transform_data(input_folder_path: str, output_folder_path: str) -> None:
     """Consolidates pagewise metadata and embedding for each chunk into JSON file and stores them under corresponding folders named after individual files.
 
     Args:
