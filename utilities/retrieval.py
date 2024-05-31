@@ -44,7 +44,7 @@ def vector_search(user_query: str) -> list:
                 "queryVector": query_embedding,  # Embedding representation of the use query
                 "path": "embedding",  # Document field containing the embeddings
                 "numCandidates": 150,  # Number of candidate matches to consider (Limits on the number of results to return)
-                "limit": 15,  # Return top 2 matches
+                "limit": 15,  # Return top 15 matches
             }
         },
         {
