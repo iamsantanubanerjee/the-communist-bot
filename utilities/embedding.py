@@ -34,8 +34,6 @@ def transform_data(input_folder_path: str, output_folder_path) -> None:
             full_path = os.path.join(root, file)
             json_file_paths.append(full_path)
 
-    print(len(json_file_paths))
-
     for json_file in json_file_paths:
 
         output_folder_path = (
