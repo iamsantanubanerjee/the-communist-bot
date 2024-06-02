@@ -52,8 +52,8 @@ def vector_search(user_query: str) -> list:
                 "_id": 0,  # Exclude the _id field
                 "documentID": 1,  # Include the documentID field
                 # "file_path": 1,                           # Include the file_path field
-                # "file_name": 1,                           # Include the file_name field
-                # "page_number": 1,
+                "file_name": 1,                           # Include the file_name field
+                "page_number": 1,
                 "content": 1,
                 # "embedding": 1,
                 # "score": {"$meta": "vectorSearchScore"},  # Include the search score

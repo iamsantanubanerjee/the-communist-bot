@@ -2,3 +2,4 @@ Issues faced with LangChain that needed manual intervention:
 
 1. chunking and embedding only had page number and source as metadata. No scope for manual metadata entries.
 2. No support for HuggingFace embedding with MongoAtlas yet?
+3. (Not related to this specific project) Structured data needs to be processed seperately and ingested
